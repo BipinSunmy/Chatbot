@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>YouBot</h1>
+        </div>
+        <div class="chat-body">
+            <div class="chat-box" id="chat-box">
+                <!-- Chat messages will go here -->
+            </div>
+            <div class="chat-input-container">
+                <input type="text" id="message" placeholder="Type a message...">
+                <button id="send-text" class="button">Send Text</button>
+            </div>
+            <div class="file-input-container">
+                <input type="text" id="upload-url" placeholder="Paste URL here..." class="url-input">
+                <button id="send-url-pdf" class="button">Send URL</button>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='middle.js') }}"></script>
+</body>
+</html>
